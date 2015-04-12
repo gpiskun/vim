@@ -18,5 +18,5 @@ augroup project
 augroup END
 
 " include Vundle config
-source vimrc.vundle
+source /etc/vim/vimrc.vundle
 

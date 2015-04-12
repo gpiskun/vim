@@ -1,0 +1,22 @@
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set noexpandtab
+
+" apply local .vimrc from directory where you run vim.
+set exrc
+set secure
+
+" I also try to keep my lines 110 chars at most, so I highlight column number 110 with color.
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+
+" By default, vim assumes all .h files to be C++ files. However, I work with pure C and want filetype to be c. Since project also comes with doxygen documentation, I want to set subtype to doxygen to enable very nice doxygen highlighting.
+augroup project
+    autocmd!
+    autocmd BufRead, BufNewFile *.h, *.c set filetype=c.doxygen
+augroup END
+
+" include Vundle config
+source vimrc.vundle
+
